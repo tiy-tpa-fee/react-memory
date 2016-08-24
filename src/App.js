@@ -4,7 +4,20 @@ import Card from './Card'
 
 class App extends React.Component {
 
+  constructor () {
+    super()
+    this.state = {
+      cards: [
+        { value: 'Jake', up: true },
+        { value: 'Princess', up: false },
+        { value: 'Finn', up: true },
+        { value: 'BMO', up: false }
+      ]
+    }
+  }
   render () {
+    let cardData = this.state.cards
+    let test = cardData.map()
     return <div>
       <h1>Class doing memory____TOGETHHHHHHHER!!!!</h1>
       <main>
