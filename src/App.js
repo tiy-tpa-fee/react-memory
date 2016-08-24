@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.sass'
+import Card from './Card'
 
 class App extends React.Component {
 
@@ -7,10 +8,10 @@ class App extends React.Component {
     return <div>
       <h1>Class doing memory____TOGETHHHHHHHER!!!!</h1>
       <main>
-        <div className="card up">Jake</div>
-        <div className="card down">Fin</div>
-        <div className="card up">Princess</div>
-        <div className="card down">BMO</div>
+        <Card value="Jake" up={true} />
+        <Card value="Princess" up={false} />
+        <Card value="Finn" up={true} />
+        <Card value="BMO" up={false} />
       </main>
     </div>
   }
