@@ -2,7 +2,7 @@ import React from 'react'
 
 class Card extends React.Component {
   handleClick = () => {
-    this.props.flipCard()
+    this.props.flipCard(this.props.index)
   }
 
   render () {
