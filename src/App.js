@@ -19,14 +19,21 @@ class App extends React.Component {
         'BMO',
         'Ice King'
       ],
-      matched: [5, 8],
-      turned: [2]
+      matched: [],
+      turned: []
     }
   }
 
   flipCard = (index) => {
     const cards = this.state.cards
-
+    const turned = this.state.turned
+    if (turned.length < 2) {
+      this.setState({
+        turned: turned.concat(index)
+      }, () => {
+        console.log(this.state.turned)
+      })
+    }
     this.setState({ cards: cards })
   }
 
