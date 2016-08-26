@@ -39,7 +39,9 @@ class App extends React.Component {
               turned: []
             }, () => {
               if (this.state.matched.length === cards.length) {
-                this.setState({ win: true })
+                setTimeout(() => {
+                  this.setState({ win: true })
+                }, SHOW_CARD/2)
               }
             })
           } else {
@@ -50,16 +52,14 @@ class App extends React.Component {
         }
       })
     }
-    this.setState({ cards: cards })
   }
 
   render () {
-    // let cardData = this.state.cards
-    const cards = this.state.cards.map((card, index) => {
-      const up = (this.state.turned + this.state.matched).includes(index)
-      return <Card flipCard={this.flipCard} value={card} up={up} index={index} key={index} />
-    })
     if (!this.state.win) {
+      const cards = this.state.cards.map((card, index) => {
+        const up = (this.state.turned + this.state.matched).includes(index)
+        return <Card flipCard={this.flipCard} value={card} up={up} index={index} key={index} />
+      })
       return <div>
         <h1>Class doing memory____TOGETHHHHHHHER!!!!</h1>
         <main>
