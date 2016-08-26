@@ -31,7 +31,12 @@ class App extends React.Component {
       this.setState({
         turned: turned.concat(index)
       }, () => {
-        console.log(this.state.turned)
+        if (turned.length === 2) {
+          if (turned[0] === turned[1]1) {
+
+          }
+
+        }
       })
     }
     this.setState({ cards: cards })
